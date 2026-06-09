@@ -3,12 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
   const backToTop = document.getElementById('backToTop');
+  const instaBar = document.getElementById('instaBar');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Header scroll
+  // Header scroll + Instagram bar hide
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-    backToTop.classList.toggle('visible', window.scrollY > 600);
+    const scrolled = window.scrollY > 50;
+    header.classList.toggle('scrolled', scrolled);
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 600);
+    if (instaBar) instaBar.classList.toggle('hidden', scrolled);
   });
 
   // Hamburger menu
