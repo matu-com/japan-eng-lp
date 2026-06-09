@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 株式会社日本エンジニア</title>
+  <meta name="description" content="株式会社日本エンジニアへのお問い合わせページです。メールまたはお電話にてお気軽にご連絡ください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://japan-eng.jp/wp-content/uploads/2024/11/logo-1024x154.png" alt="株式会社日本エンジニア" class="logo-img">
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">トップ</a></li>
+          <li><a href="index.html#about" class="nav-link">会社概要</a></li>
+          <li><a href="index.html#business" class="nav-link">事業紹介</a></li>
+          <li><a href="index.html#offices" class="nav-link">事業所情報</a></li>
+          <li><a href="index.html#news" class="nav-link">ニュース</a></li>
+          <li><a href="contact.html" class="nav-link nav-link--cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-label section-label--light">Contact</span>
+      <h1 class="page-hero-title">お問い合わせ</h1>
+      <p class="page-hero-desc">お気軽にご相談・お問い合わせください。</p>
+    </div>
+  </section>
+
+  <!-- Contact Method Selector -->
+  <section class="contact-section">
+    <div class="container">
+
+      <div class="contact-methods">
+        <button class="method-tab active" id="tabMail" data-target="mail">
+          <div class="method-tab-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M4 14l20 14 20-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="method-tab-text">
+            <span class="method-tab-label">メールでのお問い合わせ</span>
+            <span class="method-tab-sub">フォームに必要事項をご入力ください</span>
+          </div>
+        </button>
+        <button class="method-tab" id="tabPhone" data-target="phone">
+          <div class="method-tab-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M44 33.84v6a4 4 0 01-4.36 4 39.58 39.58 0 01-17.26-6.14 39 39 0 01-12-12A39.58 39.58 0 014.24 8.36 4 4 0 018.22 4h6a4 4 0 014 3.44c.254 1.92.722 3.806 1.4 5.62a4 4 0 01-.9 4.22L16.18 19.82a32 32 0 0012 12l2.54-2.54a4 4 0 014.22-.9c1.814.678 3.7 1.146 5.62 1.4A4 4 0 0144 33.84z" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <div class="method-tab-text">
+            <span class="method-tab-label">お電話でのお問い合わせ</span>
+            <span class="method-tab-sub">受付時間：平日 9:00〜18:00</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Mail Panel -->
+      <div class="contact-panel active" id="panelMail">
+        <div class="form-container">
+          <div class="form-header">
+            <h2 class="form-title">メールでのお問い合わせ</h2>
+            <p class="form-desc">以下のフォームに必要事項をご入力の上、「送信する」ボタンを押してください。<br>担当者より折り返しご連絡いたします。</p>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+
+            <div class="form-group">
+              <label class="form-label" for="company">
+                会社名
+                <span class="form-required">必須</span>
+              </label>
+              <input type="text" id="company" name="company" class="form-input" placeholder="例：株式会社○○" required>
+              <span class="form-error" id="errorCompany">会社名を入力してください</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="name">
+                担当者名
+                <span class="form-required">必須</span>
+              </label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="例：山田 太郎" required>
+              <span class="form-error" id="errorName">担当者名を入力してください</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                電話番号
+                <span class="form-required">必須</span>
+              </label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="例：06-1234-5678" required>
+              <span class="form-error" id="errorPhone">電話番号を入力してください</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                メールアドレス
+                <span class="form-required">必須</span>
+              </label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="例：info@example.com" required>
+              <span class="form-error" id="errorEmail">正しいメールアドレスを入力してください</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">
+                お問い合わせ内容
+                <span class="form-optional">任意</span>
+              </label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="お問い合わせ内容をご記入ください" rows="5"></textarea>
+            </div>
+
+            <div class="form-privacy">
+              <label class="form-checkbox-label">
+                <input type="checkbox" id="privacy" class="form-checkbox" required>
+                <span class="form-checkbox-custom"></span>
+                <span>個人情報の取り扱いに同意する</span>
+              </label>
+              <span class="form-error" id="errorPrivacy">同意が必要です</span>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn--primary btn--lg form-submit-btn">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                送信する
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Phone Panel -->
+      <div class="contact-panel" id="panelPhone">
+        <div class="phone-container">
+          <div class="phone-icon-wrap">
+            <div class="phone-icon-circle">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48"><path d="M44 33.84v6a4 4 0 01-4.36 4 39.58 39.58 0 01-17.26-6.14 39 39 0 01-12-12A39.58 39.58 0 014.24 8.36 4 4 0 018.22 4h6a4 4 0 014 3.44c.254 1.92.722 3.806 1.4 5.62a4 4 0 01-.9 4.22L16.18 19.82a32 32 0 0012 12l2.54-2.54a4 4 0 014.22-.9c1.814.678 3.7 1.146 5.62 1.4A4 4 0 0144 33.84z" stroke="currentColor" stroke-width="2.5"/></svg>
+            </div>
+          </div>
+          <h2 class="phone-title">お電話でのお問い合わせ</h2>
+          <p class="phone-desc">お急ぎの場合は、お電話にてお問い合わせください。<br>専門スタッフが丁寧にご対応いたします。</p>
+          <a href="tel:06-6964-4120" class="phone-number-link">
+            <span class="phone-number">06-6964-4120</span>
+            <span class="phone-tap-hint">タップで電話をかける</span>
+          </a>
+          <div class="phone-info-grid">
+            <div class="phone-info-item">
+              <div class="phone-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <span class="phone-info-label">受付時間</span>
+                <span class="phone-info-value">平日 9:00〜18:00</span>
+              </div>
+            </div>
+            <div class="phone-info-item">
+              <div class="phone-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <span class="phone-info-label">定休日</span>
+                <span class="phone-info-value">土曜・日曜・祝日</span>
+              </div>
+            </div>
+            <div class="phone-info-item">
+              <div class="phone-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <span class="phone-info-label">FAX</span>
+                <span class="phone-info-value">06-6964-4122</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://japan-eng.jp/wp-content/uploads/2024/11/logo-1024x154.png" alt="株式会社日本エンジニア" class="footer-logo">
+          <p class="footer-tagline">今を護り、未来へつなぐ。</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4 class="footer-col-title">会社情報</h4>
+            <ul>
+              <li><a href="index.html#about">会社概要</a></li>
+              <li><a href="index.html#offices">事業所情報</a></li>
+              <li><a href="index.html#news">ニュース</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">事業内容</h4>
+            <ul>
+              <li><a href="index.html#business">建設業</a></li>
+              <li><a href="index.html#business">警備業</a></li>
+              <li><a href="index.html#business">測量業</a></li>
+              <li><a href="index.html#business">ドローン事業</a></li>
+              <li><a href="index.html#business">派遣業</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">お問い合わせ</h4>
+            <ul>
+              <li>TEL: 06-6964-4120</li>
+              <li>FAX: 06-6964-4122</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 株式会社日本エンジニア All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
